@@ -1,0 +1,4 @@
+outs:
+- md5: 40e9782543da875d27c609a35da13120
+  size: 14569
+  path: synchronous_machine.csv

@@ -1,0 +1,4 @@
+outs:
+- md5: 7978c5900cedfeb5202679fb514a489f
+  size: 465
+  path: best_gs_model_0.1.0.mlem
