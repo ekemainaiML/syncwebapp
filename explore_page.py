@@ -57,7 +57,7 @@ def view_scatterplot(data: pd.DataFrame, nrows, ncols, titles):
     return fig1
 
 
-@st.experimental_memo
+@st.cache_data
 def view_heatmap(data):
     fig = px.imshow(data, text_auto=True, aspect="auto")
 
@@ -86,7 +86,8 @@ def show_explore_page():
         machines based on genetic algorithm-based k-NN estimator.Â Energy Conversion and Management,
         Â 64, 129-138.
         """)
-    
+    st.markdown("**♟ General Statistics ♟**")
+    st.write(data)
     st.write(""" ### 
         This is the scatter plot to show data distribution
     """)
