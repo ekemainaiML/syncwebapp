@@ -13,9 +13,11 @@ RUN apt-get update && apt-get install -y \
 
 RUN git clone https://github.com/ekemainaiML/syncwebapp.git .
 
-COPY . .
+COPY   ./requirements.txt /syncwebapp/requirements.txt
 
-RUN pip3 install -r requirements.txt
+COPY ./syncwebapp /syncwebapp
+
+RUN pip install --no-cache-dir --upgrade -r /syncwebapp/requirements.txt
 
 EXPOSE 8501
 
