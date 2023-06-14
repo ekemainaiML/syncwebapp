@@ -16,10 +16,10 @@ RUN git clone https://github.com/ekemainaiML/syncwebapp.git .
 
 COPY . .
 
-RUN pip3 install -r ./requirements.txt
+RUN pip3 install -r requirements.txt
 
-EXPOSE 8501
+EXPOSE 80
 
 HEALTHCHECK CMD curl --fail http://localhost:80/_stcore/health
 
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=80", "--server.address=0.0.0.0"]
